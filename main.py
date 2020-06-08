@@ -38,7 +38,6 @@ class MyClient(discord.Client):
                         await message.channel.send("the server is " + server_status)
                     except AttributeError:
                         page = requests.get(url, headers=headers)
-                        time.sleep
                         soup = BeautifulSoup(page.content, 'html.parser')
                         server_status = soup.find(attrs={"status-label online"}).get_text()
                         server_status = server_status.strip()
