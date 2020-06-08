@@ -218,10 +218,8 @@ class MyClient(discord.Client):
                     elif i!= "l" or i != "r" or i !="L" or i != "R":
                         ret_val+=i
                 await message.channel.send(ret_val)
-
-            if True:
-                if "@everyone" in message.content:
-                    await message.channel.send('σκασε')
+            if "@everyone" in message.content:
+                await message.channel.send('σκασε')
 
 client = MyClient()
 client.run('********************************************')
